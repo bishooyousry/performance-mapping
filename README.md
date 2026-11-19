@@ -1,29 +1,35 @@
-# Performance Mapping Lab (Activity 4): Efficiency × Effectiveness, in groups
+# Performance Mapping Lab (Activity 4): a card game for groups
 
-One HTML file, English and Arabic (RTL), official Skills Bank palette and logo. Built from your scenario file and the matrix flipchart: same 10 scenarios (text verbatim), same four quadrants, same P/Q and risk list, same debrief notes.
+One HTML file, English and Arabic (RTL), official Skills Bank palette and logo. Your 10 scenarios (text verbatim) become a hand of real cards: **pick a card, stamp the risk (Q or P), place it on the Efficiency × Effectiveness matrix**. Q = Quality Risk, P = Productivity Risk.
 
-## How a group works
-1. Players type a name, enter the session code and pick a **group** (Group 1 to 6; 3-5 people per group, one group per breakout room).
-2. All members of a group share **one live board** from their own devices (any member can move cards; one person can drive while the group talks). Groups never see each other's boards.
-3. **Select a card** in the list (the scenario opens with its facts), then **place it** in a quadrant: tap "Place card N here", or drag the card onto the matrix.
-4. For each placed card: **P / Q** (P = Productivity risk, Q = Quality risk), the **risks** it creates (quality defects, customer dissatisfaction, rework, missed deadlines, excessive labour / time, unnecessary workload, low-value output, or "No risk: sustain it"), and the **managerial action** to move it toward High / High (up to 140 characters).
-5. Diagnoses stay hidden until the trainer presses **Reveal diagnoses**. Then each group sees its placements against the facilitator diagnosis with the debrief note per scenario (cards 2 and 8 are flagged for debate; card 8 accepts two quadrants), and writes the **leadership principles** that achieve and sustain High Effectiveness and High Efficiency.
-Without a session code a single device works on its own and can check its own answers.
+## How a group plays
+1. Players type a name, enter the session code and pick a **group** (1 to 6; 3-5 people per group). All members of a group share one live board from their own devices (or one person drives while the group talks). Groups never see each other.
+2. The trainer chooses a time and presses **START ROUND**: every group sees 3-2-1 at the same moment and the face-down deck turns over. A timer counts down; the boards lock when the time is up.
+3. For each card: read the scenario card, **stamp** it (**Q** quality risk, **P** productivity risk, **Q+P** both, or **No risk**), then **place** it in its quadrant (tap "Place card here" or drag the card). The stamp comes first. The group can **lock its board** when all ten are done.
+4. The trainer presses **REVEAL RESULTS**: each group gets its score (150 max), a title, the leaderboard, and the model answer for every card. Then each group writes the leadership principles that achieve and sustain High Effectiveness and High Efficiency.
+Scoring: 10 points for the right quadrant, up to 5 for the right stamp (2 if partly right). Titles: Rising Analyst, Sharp Analyst, Efficiency Expert (90+), Performance Architect (120+). Card 2 accepts one quadrant; card 8 accepts two (your debate note). Without a session code a single device plays alone and can check its own answers.
 
-## Trainer dashboard
-Code 2026 (hides the interface only). Per group: members, progress, live mini-matrix. A **consensus table** (how many groups placed each card in each quadrant, diagnosis marked, "groups differ" flag), the groups' principles, Reveal / Hide diagnoses, a projector view (group matrices side by side, where groups differ, scenario notes, principles), and CSV export (group, card, quadrant, match, P/Q, risks, action, principles).
+## Trainer dashboard (code 2026)
+Round control (time, start, end), live groups (members, cards done, lock, mini-matrix with stamps), **Model answers for every card** (best quadrant, best stamp, why, how to move it, and your facilitator note), leaderboard, consensus table (how many groups chose each quadrant, "groups differ" flag), the groups' principles, projector view (group matrices, where groups differ, scenario + model answer, leaderboard, principles) and CSV export.
 
-## Quadrants (efficiency up, effectiveness right)
-| | Low effectiveness | High effectiveness |
+## Model answers (quadrant, best stamp)
+| Card | Quadrant | Stamp |
 | --- | --- | --- |
-| **High efficiency** | Efficient & Ineffective (cards 2, 3, 6, 8) | Efficient & Effective (cards 5, 10) |
-| **Low efficiency** | Inefficient & Ineffective (card 9) | Inefficient & Effective (cards 1, 4, 7) |
+| 1 Monthly Management Report | Inefficient & Effective | P |
+| 2 Rapid Customer Response Team (debate) | Efficient & Ineffective | Q+P |
+| 3 Weekly Coordination Meeting | Efficient & Ineffective | Q |
+| 4 Quality Review Process | Inefficient & Effective | P |
+| 5 Automated Invoice Process | Efficient & Effective | No risk |
+| 6 Executive Dashboard | Efficient & Ineffective | Q |
+| 7 Client Proposal Team | Inefficient & Effective | P |
+| 8 Process Improvement Initiative (debate) | Efficient & Ineffective (or Inefficient & Ineffective) | Q |
+| 9 Order Fulfilment Team | Inefficient & Ineffective | Q+P |
+| 10 High-Performing Service Desk | Efficient & Effective | No risk |
 
 ## Please check
-1. **P/Q and risk suggestions** shown after the reveal are my suggestions (rule: low efficiency suggests P, low effectiveness suggests Q); your scenario file has no key for them. They are labelled "added for this tool" and are not scored. Edit `sugg` in the code if you want different ones.
-2. The **Arabic text** of the cards and the debrief notes is my translation: please have it reviewed.
-3. Scoring is only "placed as diagnosed" (10 cards). Card 2 accepts only Efficient & Ineffective; card 8 accepts Efficient & Ineffective or Inefficient & Ineffective (per your note about the debate).
-4. Tested with simulated devices and a test relay (two groups, several devices per group), not on real phones or the live ntfy.sh relay. The public relay is not confidential: fictional scenarios only.
+1. The **quadrants and the facilitator notes** come from your scenario file. The **best stamps, the "why" and "move it" lines, the icons, the scoring and the titles** were written for this tool: please review them (the stamp answers especially, cards 2, 3, 6, 8 and 9).
+2. The Arabic text of the cards and the model answers is my translation: please have it reviewed.
+3. Tested with simulated devices and a test relay (two groups, several devices per group), not on real phones or the live ntfy.sh relay. The public relay is not confidential: fictional scenarios only.
 
 ## Publish (GitHub Pages)
 Upload `index.html` and `.nojekyll` to the repo root; Settings > Pages > Deploy from branch. Open the published address, not a preview viewer.
